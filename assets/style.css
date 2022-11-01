@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+}
+                             
+header {
+    padding: 40px;
+    margin: 20px;
+    text-align: center;
+    background-color: aqua;
+    border: 2px solid black;
+}
+
+.citysearch {
+    margin: 20px;
+    padding: 30px;
+    border: 2px solid black;
+    display: flex;
+    align-items: left;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: left;
+    background-color: aquamarine;
+}
+
+.pastcities {
+    margin: 20px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: aquamarine;
+    display: none;
+}
+
+.weathernow {
+    border: 2px solid black;
+    margin: 20px;
+    display: flex;
+}
+/* Styling for 5 day forecast cards */
+.forecast {
+    display: flex;
+    flex-wrap: wrap;
+}
+.column {
+    float: left;
+    width: 20%;
+    padding: 0 10px;
+}
+
+.row {
+    margin: 0 -5px;   
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0;
+    padding: 15px;
+    text-align: center;
+    background-color: rgb(92, 133, 255);
+}
