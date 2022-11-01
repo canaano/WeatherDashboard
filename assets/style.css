@@ -11,14 +11,18 @@ body {
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
+    background-image: url(./RainDrops.jpg);
+    background-position: center;
 }
                              
 header {
-    padding: 40px;
-    margin: 20px;
-    text-align: center;
+    padding: 20px;
+
+    
+    min-height: 10vh;
+    text-align: left;
     background-color: aqua;
-    border: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 aside {
@@ -42,6 +46,8 @@ flex: 1;
     text-align: left;
     background-color: aquamarine;
     max-width: 30%;
+    min-width: 200px;
+
 }
 textarea {
     margin: 10px;
@@ -63,17 +69,23 @@ button {
 
 .weathernow {
     width: 60%;
-    flex: 1;
+    display: flex;
+    align-content: center;
     border: 2px solid black;
     margin: 20px;
     display: flex;
     background-color: lightsteelblue;
     text-align: center;
+    min-width: 200px;
+    min-height: 200px;
+
 }
 /* Styling for 5 day forecast cards */
 .flex-container-2 {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    flex-flow: row wrap;
 }
 .forecast {
     display: flex;
@@ -94,11 +106,14 @@ button {
     display: table;
     clear: both;
 }
-
 .card {
-    min-width: 100px;
+    display: flex;
+    flex: 1 0 18%;
+    justify-content: space-between;
+    min-width: 150px;
     box-shadow: 0 4px 8px 0;
     padding: 15px;
     text-align: center;
-    background-color: rgb(92, 133, 255);
+    background-color: rgb(92, 133, 255); 
 }
+
