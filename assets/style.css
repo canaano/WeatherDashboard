@@ -47,6 +47,7 @@ header {
     border: 2px solid black;
     margin: 20px;
     display: flex;
+    background-color: lightsteelblue;
 }
 /* Styling for 5 day forecast cards */
 .forecast {
