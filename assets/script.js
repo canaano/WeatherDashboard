@@ -41,16 +41,40 @@ function getBodyData(forecast) {
 }
 
 $( document ).ready(function() {
+    function mountHeaderData(data) {
+      $('#city').text(data.city);
+      $('#temp').text(data.temp);
+      $('#humid').text(data.humidity);
+      $('#wind').text(data.windSpeed);
+    }
+
+    function mountBodyData(data) {
+        const cards = document.getElementsByClassName('forecast-card')
+        $('.forecast-card').addClass('show');
+
+        for(let i = 0; i <= cards.length; i++) {
+          cards[i].innerHTML = `
+          <div class="content-wrapper">
+          <img id="current-pic" alt="">
+          <p class="temperature">Temp: ${data[i].temp}</p>
+          <p class="humidity">Humidity: ${data[i].humidity}</p>
+          <p class="wind-speed">Wind Speed: ${data[i].windSpeed}</p> 
+          </div>
+          `
+        }
+    }
     // Handler for .ready() called.
     $( "#search-button" ).on( "click", async function() {
         const cityName = $('#search-input').val()
         const  { lat, lon} = await searchForCity(cityName);
         const forecast = await getForecast(lat, lon);
-        // console.log(getHeaderData(cityName, forecast))
-        // console.log(getBodyData(forecast), 'body')
+        const headerData = getHeaderData(cityName, forecast)
+        const bodyData = getBodyData(forecast);
+        
+        // mount headerData on page 
+        mountHeaderData(headerData);
+        mountBodyData(bodyData);
 
-
-        // console.log(forecast, 'raw')
       })
   });
 
