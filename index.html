@@ -31,11 +31,14 @@
           />
           <button id="search-button" type="button" class="btn btn-outline-primary">search</button>
         </div>
+        <ul id="search-history">
+          <!-- dynamic list of cities from localstorage-->
+        </ul>
       </aside>
         <div class="card weathernow">
           Weather Now
           <h3 id="city" class="city-name align-middle"></h3>
-          <img id="current-pic" alt="">
+          <span id="weathernow-icon"></span>
           <p id="temp"> </p>
           <p id="humid"></p>
           <p id="wind"></p>
@@ -45,10 +48,10 @@
     <section class="flex-container-2 forecast row">
       <div class="column">
         <div class="forecast-card">
-          <img class="current-pic" alt="">
+          <!-- <img class="current-pic" alt="">
           <p class="temperature"></p>
           <p class="humidity"></p>
-          <p class="wind-speed"></p>
+          <p class="wind-speed"></p> -->
         </div>
       </div>
       <div class="column">
@@ -85,6 +88,7 @@
       </div>
     </section>
  b    </div>
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

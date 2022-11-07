@@ -2,46 +2,42 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
-}
-
-body {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
     background-image: url(./RainDrops.jpg);
     background-position: center;
-}
-
-                             
-header {
+  }
+  
+  header {
     padding: 20px;
-
-    
+  
     min-height: 10vh;
     text-align: left;
     background-color: aqua;
     border-bottom: 2px solid black;
-}
-
-aside {
-width: 30%;
-flex: 1;
-
-}
-
-.flex-container-1 {
+  }
+  
+  aside {
+    width: 30%;
+    flex: 1;
+  }
+  
+  .flex-container-1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-.citysearch {
+  }
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .citysearch {
     margin: 20px;
     padding: 30px;
     border: 2px solid black;
@@ -51,17 +47,16 @@ flex: 1;
     background-color: aquamarine;
     max-width: 50%;
     min-width: 350px;
-
-}
-textarea {
+  }
+  textarea {
     margin: 10px;
-}
-
-button {
+  }
+  
+  button {
     text-align: center;
-}
-
-.pastcities {
+  }
+  
+  .pastcities {
     margin: 20px;
     border: 2px solid black;
     display: flex;
@@ -69,11 +64,11 @@ button {
     text-align: left;
     background-color: aquamarine;
     /* display: none; */
-}
-
-.weathernow {
+  }
+  
+  .weathernow {
     margin: 20px;
-    max-width: 25%;
+    width: 50%;
     display: flex;
     justify-content: center;
     border: 2px solid black;
@@ -81,36 +76,34 @@ button {
     display: flex;
     background-color: lightsteelblue;
     text-align: center;
-    min-width: 200px;
     min-height: 200px;
-
-}
-/* Styling for 5 day forecast cards */
-.flex-container-2 {
+  }
+  /* Styling for 5 day forecast cards */
+  .flex-container-2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-.forecast {
+  }
+  .forecast {
     display: flex;
     flex-wrap: wrap;
-}
-.column {
+  }
+  .column {
     float: left;
     width: 20%;
     padding: 0 10px;
-}
-
-.row {
-    margin: 0 -5px;   
-}
-
-.row:after {
-    content: "";
+  }
+  
+  .row {
+    margin: 0 -5px;
+  }
+  
+  .row:after {
+    content: '';
     display: table;
     clear: both;
-}
-.forecast-card {
+  }
+  .forecast-card {
     display: none;
     flex: 1 0 18%;
     justify-content: space-between;
@@ -118,14 +111,17 @@ button {
     box-shadow: 0 4px 8px 0;
     padding: 15px;
     text-align: center;
-    background-color: rgb(92, 133, 255); 
-}
-
-.show {
+    background-color: rgb(92, 133, 255);
+  }
+  
+  .show {
     display: block;
-}
-
-
-.space {
+  }
+  
+  .list {
+    cursor: pointer;
+  }
+  
+  .space {
     padding: 30px;
-}
+  }
