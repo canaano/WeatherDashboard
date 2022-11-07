@@ -1,27 +1,10 @@
+// API links and key
 const API_URL = 'https://api.openweathermap.org/data/3.0/onecall';
 const API_KEY = 'c557c62e75b66b19afd499c178c60c24';
 const SEARCH_API = 'https://api.openweathermap.org/geo/1.0/direct';
 const FORECAST_URL = 'https://api.openweathermap.org/data/3.0/onecall';
 
 $(document).ready(function () {
-  function getWeatherIcon(weather) {
-    switch (weather) {
-      case 'Clear':
-        return '<iconify-icon icon="wi:day-sunny"></iconify-icon>';
-      case 'Clouds':
-        return '<iconify-icon icon="bi:cloudy-fill"></iconify-icon>';
-      case 'Rain':
-      case 'Drizzle':
-      case 'Mist':
-        return '<iconify-icon icon="bi:cloud-rain"></iconify-icon>';
-      case 'Thunderstorm':
-        return '<iconify-icon icon="bi:cloud-lightning-rain"></iconify-icon>';
-      case 'Snow':
-        return '<iconify-icon icon="bi:cloud-snow"></iconify-icon>';
-      default:
-        return '<iconify-icon icon="wi:day-sunny"></iconify-icon>';
-    }
-  }
   function getSearchHistory() {
     const searchHistory = localStorage.getItem('searchHistory')
       ? JSON.parse(localStorage.getItem('searchHistory'))
@@ -39,8 +22,7 @@ $(document).ready(function () {
   async function searchForCity(cityName) {
     try {
       const request = await fetch(
-        `${SEARCH_API}?q=${cityName}&appid=${API_KEY}`,
-      );
+        `${SEARCH_API}?q=${cityName}&appid=${API_KEY}`,);
       if (request.ok) {
         const response = await request.json();
         const { lat, lon } = response[0];
@@ -109,6 +91,26 @@ $(document).ready(function () {
           `;
     }
   }
+// add logic for icon loading based off weather
+  function getWeatherIcon(weather) {
+    switch (weather) {
+      case 'Clear':
+        return '<iconify-icon icon="wi:day-sunny"></iconify-icon>';
+      case 'Clouds':
+        return '<iconify-icon icon="bi:cloudy-fill"></iconify-icon>';
+      case 'Rain':
+      case 'Drizzle':
+      case 'Mist':
+        return '<iconify-icon icon="bi:cloud-rain"></iconify-icon>';
+      case 'Thunderstorm':
+        return '<iconify-icon icon="bi:cloud-lightning-rain"></iconify-icon>';
+      case 'Snow':
+        return '<iconify-icon icon="bi:cloud-snow"></iconify-icon>';
+      default:
+        return '<iconify-icon icon="wi:day-sunny"></iconify-icon>';
+    }
+  }
+
 
   function buildSearchAndMountHistory() {
     const searchHistory = getSearchHistory();
