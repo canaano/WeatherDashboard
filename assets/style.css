@@ -19,9 +19,13 @@
     text-align: left;
     background-image: url(./elcarito-MHNjEBeLTgw-unsplash\ Large.jpeg);
     background-position: bottom;
+    background-size: cover;
     border-bottom: 2px solid black;
   }
-  
+  h1 {
+    text-shadow: white 1px 1px 1px; 
+  }
+
   aside {
     width: 30%;
     flex: 1;
@@ -41,11 +45,12 @@
     margin: 20px;
     padding: 30px;
     border: 2px solid black;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     text-align: left;
-    background-color: rgb(124, 233, 195);
-    max-width: 50%;
+    background-image: linear-gradient(white, lightsteelblue);
+    max-width: 40%;
     min-width: 350px;
   }
   textarea {
@@ -68,10 +73,11 @@
   
   .weathernow {
     margin: 20px;
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: center;
     border: 2px solid black;
+    border-radius: 10px;
     display: flex;
     background-image: linear-gradient(gray,lightsteelblue);
     text-align: center;
