@@ -10,16 +10,15 @@
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
-    background-image: url(./RainDrops.jpg);
-    background-position: center;
+    background-color: azure;
   }
   
   header {
     padding: 20px;
-  
     min-height: 10vh;
     text-align: left;
-    background-color: rgb(175, 185, 185);
+    background-image: url(./elcarito-MHNjEBeLTgw-unsplash\ Large.jpeg);
+    background-position: bottom;
     border-bottom: 2px solid black;
   }
   
@@ -28,6 +27,7 @@
     flex: 1;
   }
   
+
   .flex-container-1 {
     display: flex;
     flex-wrap: wrap;
@@ -44,7 +44,7 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    background-color: aquamarine;
+    background-color: rgb(124, 233, 195);
     max-width: 50%;
     min-width: 350px;
   }
@@ -62,7 +62,7 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    background-color: aquamarine;
+    background-image: blue;
     /* display: none; */
   }
   
@@ -73,7 +73,7 @@
     justify-content: center;
     border: 2px solid black;
     display: flex;
-    background-color: lightsteelblue;
+    background-image: linear-gradient(gray,lightsteelblue);
     text-align: center;
     min-height: 200px;
   }
@@ -110,7 +110,8 @@
     box-shadow: 0 4px 8px 0;
     padding: 15px;
     text-align: center;
-    background-color: rgb(92, 133, 255);
+    background-image: linear-gradient(rgb(92, 133, 255), white);
+    border-radius: 10px;
   }
   
   .show {
